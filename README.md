@@ -30,15 +30,53 @@ A curated list of **Physics-Informed World Models (PIWM)** and broader **World M
 
 ## Curated Lists
 
-- [01 Foundations and Milestones](lists/01-foundations.md)
-- [02 PIWM Methods](lists/02-piwm-methods.md)
-- [03 Datasets and Environments](lists/03-datasets-and-environments.md)
-- [04 Benchmarks and Evaluation](lists/04-benchmarks-and-evaluation.md)
-- [05 Open Source and Toolkits](lists/05-open-source-and-toolkits.md)
-- [06 Chinese-First Resources](lists/06-chinese-first-resources.md)
-- [07 Surveys and Roadmaps](lists/07-surveys-and-roadmaps.md)
-- [08 Reproducibility and Engineering](lists/08-reproducibility-and-engineering.md)
-- [Lists Index (searchable)](lists/index.html)
+### 📰 News & Updates
+
+1. **Repository Updates**
+   - [Changelog](CHANGELOG.md)
+   - [GitHub Pages deployment notes](docs/GITHUB_PAGES.md)
+
+2. **Project Navigation**
+   - [Homepage](index.html)
+   - [Lists Index (searchable)](lists/index.html)
+   - [Paper Pages (interactive)](papers/all-papers.html)
+
+### 🧭 Overview
+
+1. **Foundational Landscape**
+   - [01 Foundations and Milestones](lists/01-foundations.md)
+   - [Papers by Topic (Paper + Code)](ALL_PAPERS.md)
+
+2. **Method Taxonomy**
+   - [02 PIWM Methods](lists/02-piwm-methods.md)
+   - [04 Benchmarks and Evaluation](lists/04-benchmarks-and-evaluation.md)
+
+3. **Resources and Ecosystem**
+   - [03 Datasets and Environments](lists/03-datasets-and-environments.md)
+   - [05 Open Source and Toolkits](lists/05-open-source-and-toolkits.md)
+
+4. **Practice and Governance**
+   - [08 Reproducibility and Engineering](lists/08-reproducibility-and-engineering.md)
+   - [CONTRIBUTING](CONTRIBUTING.md)
+
+### 📚 Surveys of World Models
+
+1. **Core Medical Surveys**
+   - [PINN for Medical Image Analysis: A Systematic Review (2025)](https://doi.org/10.1145/3768158)
+   - [Physics-Informed ML for Computational Medical Imaging (2025)](https://doi.org/10.1007/s10462-025-11303-w)
+   - [Physics-Inspired Generative Models in Medical Imaging (2025)](https://doi.org/10.1146/annurev-bioeng-102723-013922)
+
+2. **Trustworthiness and Capability Gap**
+   - [Physical Foundations for Trustworthy Medical Imaging AI (2025)](https://arxiv.org/abs/2505.02843)
+   - [Computational Histopathology Survey (2021)](https://doi.org/10.1016/j.media.2020.101813)
+
+3. **General World-Model References**
+   - [DreamerV3 (2023)](https://arxiv.org/abs/2301.04104)
+   - [A Path Towards Autonomous Machine Intelligence (2022)](https://openreview.net/forum?id=BZ5a1r-kVsf)
+
+4. **Complete Survey List**
+   - [07 Surveys and Roadmaps](lists/07-surveys-and-roadmaps.md)
+   - [Paper portal by topic](papers/all-papers.html)
 
 ## All Papers Collection
 

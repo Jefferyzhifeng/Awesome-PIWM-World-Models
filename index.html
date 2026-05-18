@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
+    <nav class="top-nav" id="top-nav">
+      <div class="container top-nav-inner">
+        <a class="top-brand" href="#top">PIWM Medical Imaging</a>
+        <div class="top-links">
+          <a href="#sections">Sections</a>
+          <a href="#featured">Papers</a>
+          <a href="papers/all-papers.html">Paper Pages</a>
+          <a href="README.md">README</a>
+        </div>
+      </div>
+    </nav>
+
     <header class="hero">
       <div class="container">
         <div class="lang-row">
@@ -44,7 +56,7 @@
     </header>
 
     <main>
-      <section class="container panel quick-nav">
+      <section class="container panel quick-nav reveal">
         <h2 data-i18n="quick_nav">Quick Navigation</h2>
         <div class="grid mini-cards">
           <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/01-foundations.md" data-i18n="nav_foundations">Foundations</a>
@@ -58,10 +70,18 @@
         </div>
       </section>
 
-      <section class="container panel" id="sections">
-        <h2 data-i18n="core_sections">Core Sections</h2>
-        <p class="help-text">Structured by topic to support fast research scanning and engineering navigation.</p>
-        <p class="help-text" data-i18n="search_help">Use search to quickly locate a section.</p>
+      <section class="container panel reveal" id="sections">
+        <div class="section-head">
+          <p class="section-kicker">Research Map</p>
+          <h2 data-i18n="core_sections">Core Sections</h2>
+          <p class="help-text">Structured by topic to support fast research scanning and engineering navigation.</p>
+          <p class="help-text" data-i18n="search_help">Use search to quickly locate a section.</p>
+        </div>
+        <div class="section-meta">
+          <span class="chip">Academic-oriented navigation</span>
+          <span class="chip">Paper + code ecosystem</span>
+          <span class="chip">Continuously curated</span>
+        </div>
         <input id="section-search" class="search" type="text" placeholder="Search sections, e.g. diffusion / benchmark / pathology" />
         <div class="grid cards" id="section-cards">
           <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/01-foundations.md"><h3 data-i18n="c1_t">Foundations</h3><p data-i18n="c1_d">Milestone papers and core concepts.</p></a>
@@ -75,7 +95,7 @@
         </div>
       </section>
 
-      <section class="container panel" id="featured">
+      <section class="container panel reveal" id="featured">
         <h2 data-i18n="featured_title">Papers by Topic (Paper + Code)</h2>
         <p class="help-text">Awesome-style grouped papers with direct Paper and Code links.</p>
         <div class="hero-meta" id="homepage-paper-stats">
@@ -83,7 +103,7 @@
           <span class="chip" id="hp-code">With Code: --</span>
           <span class="chip" id="hp-updated">Updated: --</span>
         </div>
-        <p><a class="btn" href="ALL_PAPERS.md">Open Full Paper Index</a></p>
+        <p><a class="btn" href="papers/all-papers.html">Open Full Paper Index</a></p>
         <p><a class="btn" href="papers/all-papers.html">Open Paper Pages</a></p>
         <ul>
           <li><a href="papers/pinn-2019.html">Physics-Informed Neural Networks (2019)</a></li>
@@ -94,7 +114,7 @@
         </ul>
       </section>
 
-      <section class="container panel">
+      <section class="container panel reveal">
         <h2 data-i18n="contrib_focus">Contribution Focus</h2>
         <ul>
           <li data-i18n="f1">Primary-source links (papers, official docs, official repos)</li>
@@ -105,7 +125,7 @@
         <a class="btn" href="CONTRIBUTING.md" data-i18n="contrib_guide">Contribution Guide</a>
       </section>
 
-      <section class="container panel">
+      <section class="container panel reveal">
         <h2 data-i18n="index_title">Lists Index</h2>
         <p data-i18n="index_desc">Use the searchable index page to scan all lists quickly.</p>
         <a class="btn" href="lists/index.html" data-i18n="open_index">Open Lists Index</a>
