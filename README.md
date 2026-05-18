@@ -43,6 +43,7 @@ A curated list of **Physics-Informed World Models (PIWM)** and broader **World M
 ## All Papers Collection
 
 - Full index: [ALL_PAPERS.md](ALL_PAPERS.md)
+- Internal paper pages: [papers/all-papers.html](papers/all-papers.html)
 - Foundations focus: [01-foundations.md](lists/01-foundations.md)
 - Methods focus: [02-piwm-methods.md](lists/02-piwm-methods.md)
 - Surveys focus: [07-surveys-and-roadmaps.md](lists/07-surveys-and-roadmaps.md)

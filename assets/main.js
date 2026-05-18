@@ -2,7 +2,7 @@
   const i18n = {
     en: {
       kicker: 'Awesome Collection',
-      title: 'Awesome PIWM & World Models',
+      title: 'Physics-Informed World Models for Medical Imaging',
       subtitle: 'Research-and-engineering-focused curation for predictive and physics-informed world models.',
       chip1: '8 Curated Lists',
       chip2: 'Survey-Aligned',
@@ -57,7 +57,7 @@
     },
     zh: {
       kicker: '精选资源库',
-      title: 'Awesome PIWM 与 World Models',
+      title: '面向医学影像的物理信息世界模型（PIWM）',
       subtitle: '面向研究与工程实践的 PIWM / World Models 资源整理。',
       chip1: '8 个核心列表',
       chip2: '与综述主线对齐',
