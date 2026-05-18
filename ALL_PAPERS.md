@@ -1,6 +1,6 @@
 # Papers by Topic (Paper + Code)
 
-> Curated in an Awesome-style paper grouping format. Each item provides direct `Paper` and `Code` links when available.
+> Awesome-style grouped paper index with direct `Paper` and `Code` links when available.
 
 ## World Model Foundations
 
@@ -33,7 +33,7 @@
 - **BrLP: Latent Diffusion + Prior Knowledge (2024)** — [Paper](https://doi.org/10.1007/978-3-031-72069-7_17) · Code: N/A
 - **Physics-Informed 3D MRI Reconstruction Under Free-Breathing (2024)** — [Paper](https://arxiv.org/abs/2406.11185) · Code: N/A
 
-## MRI / CT Physics-Embedded Reconstruction
+## MRI/CT Reconstruction and Physical Embedding
 
 - **Learning a Variational Network for Accelerated MRI (2018)** — [Paper](https://doi.org/10.1002/mrm.26977) · Code: N/A
 - **A Deep Cascade for Dynamic MR Reconstruction (2018)** — [Paper](https://doi.org/10.1109/TMI.2017.2760978) · Code: N/A
@@ -62,8 +62,7 @@
 - **Computational Histopathology Survey (2021)** — [Paper](https://doi.org/10.1016/j.media.2020.101813) · Code: N/A
 - **Deep-Learning Methods for Parallel MRI Reconstruction (2020)** — [Paper](https://doi.org/10.1109/MSP.2019.2949470) · Code: N/A
 
-## Useful Entrypoints
+## Internal Navigation
 
-- Full internal paper pages: [papers/all-papers.html](papers/all-papers.html)
-- Curated list index (searchable): [lists/index.html](lists/index.html)
-- Homepage: [index.html](index.html)
+- Topic paper portal: [papers/all-papers.html](papers/all-papers.html)
+- Lists index (searchable): [lists/index.html](lists/index.html)

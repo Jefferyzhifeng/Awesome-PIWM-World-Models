@@ -167,6 +167,14 @@
   if (enBtn) enBtn.addEventListener('click', () => setLang('en'));
   if (zhBtn) zhBtn.addEventListener('click', () => setLang('zh'));
 
+  const hpTotal = document.querySelector('#hp-total');
+  const hpCode = document.querySelector('#hp-code');
+  const hpUpdated = document.querySelector('#hp-updated');
+  const featuredListItems = document.querySelectorAll('#featured li');
+  if (hpTotal) hpTotal.textContent = `Total Papers: ${featuredListItems.length}`;
+  if (hpCode) hpCode.textContent = 'With Code: See Paper Pages';
+  if (hpUpdated) hpUpdated.textContent = `Updated: ${year}`;
+
   const saved = localStorage.getItem('piwm_lang') || 'en';
   setLang(saved);
 })();
