@@ -1,4 +1,4 @@
-# Awesome PIWM & World Models [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Physics-Informed World Models for Medical Imaging [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 [![Pages](https://img.shields.io/badge/GitHub%20Pages-live-blue)](https://jefferyzhifeng.github.io/Awesome-PIWM-World-Models/)
 [![Link Check](https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/actions/workflows/link-check.yml/badge.svg)](https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/actions/workflows/link-check.yml)
@@ -12,7 +12,7 @@ A curated list of **Physics-Informed World Models (PIWM)** and broader **World M
 
 - [Quick Start](#quick-start)
 - [Curated Lists](#curated-lists)
-- [Top 10 Starter Papers](#top-10-starter-papers)
+- [All Papers Collection](#all-papers-collection)
 - [Contributing](#contributing)
 - [Project Info](#project-info)
 
@@ -40,18 +40,12 @@ A curated list of **Physics-Informed World Models (PIWM)** and broader **World M
 - [08 Reproducibility and Engineering](lists/08-reproducibility-and-engineering.md)
 - [Lists Index (searchable)](lists/index.html)
 
-## Top 10 Starter Papers
+## All Papers Collection
 
-- [Physics-Informed Neural Networks (Raissi et al., 2019)](https://doi.org/10.1016/j.jcp.2018.10.045)
-- [DreamerV3 (Hafner et al., 2023)](https://arxiv.org/abs/2301.04104)
-- [Medical World Model (Yang et al., 2025)](https://arxiv.org/abs/2507.01484)
-- [Physics-Informed ML for Medical Image Analysis Review (Banerjee et al., 2025)](https://doi.org/10.1145/3768158)
-- [Physics-Informed Latent Diffusion for MRI Synthesis (Lupke et al., 2024)](https://arxiv.org/abs/2406.19263)
-- [Denoising Diffusion Probabilistic Models (Ho et al., 2020)](https://arxiv.org/abs/2006.11239)
-- [Score-Based Generative Modeling Through SDEs (Song et al., 2021)](https://arxiv.org/abs/2011.13456)
-- [Fourier Neural Operator (Li et al., 2021)](https://arxiv.org/abs/2010.08895)
-- [DeepONet (Lu et al., 2021)](https://doi.org/10.1038/s42256-021-00302-5)
-- [Segment Anything (Kirillov et al., 2023)](https://arxiv.org/abs/2304.02643)
+- Full index: [ALL_PAPERS.md](ALL_PAPERS.md)
+- Foundations focus: [01-foundations.md](lists/01-foundations.md)
+- Methods focus: [02-piwm-methods.md](lists/02-piwm-methods.md)
+- Surveys focus: [07-surveys-and-roadmaps.md](lists/07-surveys-and-roadmaps.md)
 
 ## Contributing
 
