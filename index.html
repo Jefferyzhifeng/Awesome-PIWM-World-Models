@@ -3,21 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Physics-Informed World Models for Medical Imaging</title>
+    <title>Physics-Informed World Models for Medical Imaging — A Survey</title>
     <meta
       name="description"
-      content="A curated awesome list for PIWM and World Models with research and engineering focus."
+      content="Survey and technology roadmap for Physics-Informed World Models (PIWM) in medical imaging. Target: Proceedings of the IEEE. 52 pages, 265 references, 5 figures."
     />
+    <meta property="og:title" content="Physics-Informed World Models for Medical Imaging — A Survey" />
+    <meta property="og:description" content="Scissor argument, four integration mechanisms, 4×5 application matrix, five-dimension capability matrices, and a four-phase technology roadmap." />
+    <meta property="og:image" content="assets/figures/hero_overview.png" />
+    <meta property="og:type" content="article" />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <nav class="top-nav" id="top-nav">
       <div class="container top-nav-inner">
-        <a class="top-brand" href="#top">PIWM Medical Imaging</a>
+        <a class="top-brand" href="#top">PIWM Survey</a>
         <div class="top-links">
-          <a href="#sections">Sections</a>
-          <a href="#featured">Papers</a>
-          <a href="papers/all-papers.html">Paper Pages</a>
+          <a href="#abstract">Abstract</a>
+          <a href="#contributions">Contributions</a>
+          <a href="#mechanisms">Mechanisms</a>
+          <a href="#matrix">Matrix</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#resources">Resources</a>
           <a href="README.md">README</a>
         </div>
       </div>
@@ -30,131 +37,267 @@
           <button id="lang-zh" class="btn btn-small" type="button">中文</button>
         </div>
 
-        <p class="kicker" data-i18n="kicker">Awesome Collection</p>
+        <p class="kicker" data-i18n="kicker">Survey · Proc. IEEE (under review)</p>
         <h1 data-i18n="title">Physics-Informed World Models for Medical Imaging</h1>
         <p class="subtitle" data-i18n="subtitle">
-          Research-and-engineering-focused curation for predictive and physics-informed world models.
+          A Survey and Technology Roadmap — formalizing the integration of Physics-Informed Neural Networks and World Models for clinically trustworthy medical imaging AI.
         </p>
 
         <div class="hero-meta" id="hero-meta">
-          <span class="chip" data-i18n="chip1">8 Curated Lists</span>
-          <span class="chip" data-i18n="chip2">Survey-Aligned</span>
-          <span class="chip" id="resource-count">Counting resources...</span>
+          <span class="chip" data-i18n="chip_pages">52 pages</span>
+          <span class="chip" data-i18n="chip_refs">265 references</span>
+          <span class="chip" data-i18n="chip_figs">5 figures</span>
+          <span class="chip" data-i18n="chip_target">Target: Proc. IEEE</span>
         </div>
 
         <p>
-          <img class="overview-img" src="overview.png" alt="PIWM overview" />
+          <img class="overview-img" src="assets/figures/hero_overview.png" alt="PIWM overview hero image" />
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="README.md" data-i18n="open_readme">Open README</a>
-          <a class="btn" href="#sections" data-i18n="browse_sections">Browse Sections</a>
-          <a class="btn" href="#featured" data-i18n="featured_btn">All Papers Collection</a>
-          <a class="btn" href="CONTRIBUTING.md" data-i18n="contribute_btn">Contribute</a>
+          <a class="btn btn-primary" href="#abstract" data-i18n="read_abstract">Read Abstract</a>
+          <a class="btn" href="README.md" data-i18n="open_readme">Open README</a>
+          <a class="btn" href="#resources" data-i18n="browse_resources">Browse Resources</a>
+          <a class="btn" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models" data-i18n="github_btn">GitHub</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="container panel quick-nav reveal">
-        <h2 data-i18n="quick_nav">Quick Navigation</h2>
-        <div class="grid mini-cards">
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/01-foundations.md" data-i18n="nav_foundations">Foundations</a>
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/02-piwm-methods.md" data-i18n="nav_methods">Methods</a>
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/03-datasets-and-environments.md" data-i18n="nav_datasets">Datasets</a>
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/04-benchmarks-and-evaluation.md" data-i18n="nav_benchmarks">Benchmarks</a>
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/05-open-source-and-toolkits.md" data-i18n="nav_toolkits">Toolkits</a>
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/06-chinese-first-resources.md" data-i18n="nav_chinese">Chinese-First</a>
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/07-surveys-and-roadmaps.md" data-i18n="nav_surveys">Surveys</a>
-          <a class="mini-card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/08-reproducibility-and-engineering.md" data-i18n="nav_repro">Reproducibility</a>
+      <!-- Abstract -->
+      <section class="container panel reveal" id="abstract">
+        <p class="section-kicker" data-i18n="abstract_kicker">Survey</p>
+        <h2 data-i18n="abstract_title">Abstract</h2>
+        <p data-i18n="abstract_p1">
+          Medical imaging AI is converging from two previously separate streams. <strong>Physics-Informed Neural Networks (PINN)</strong>
+          embed governing equations of medical imaging physics (Bloch, Radon, wave, reaction-diffusion, continuum mechanics) into deep networks;
+          <strong>world models</strong> capture rich semantic, anatomical, and dynamical priors through large-scale generative or
+          self-supervised pretraining. Each stream has reached a structural ceiling.
+        </p>
+        <p data-i18n="abstract_p2">
+          Pure PINN lacks semantic understanding, individual variation adaptivity, and cross-domain generalization. Pure world models
+          hallucinate physically implausible images, fail at causal intervention, demand massive training data, and offer no hard physical
+          consistency guarantees. We argue these seven limitations are <strong>pairwise complementary</strong>—the <em>scissor argument</em>—and
+          that <strong>Physics-Informed World Models (PIWM)</strong> are the natural integration that resolves them simultaneously.
+        </p>
+        <p data-i18n="abstract_p3">
+          The survey formalizes the PIWM paradigm, introduces the physical-constraint-type axis unifying radiology and pathology,
+          develops a taxonomy of four integration mechanisms, maps PIWM coverage across five medical imaging tasks,
+          constructs literature-grounded capability matrices, operationalizes the paradigm-shift claim as a falsifiable dual-threshold
+          hypothesis, and presents a four-phase technology roadmap toward clinically trustworthy AI.
+        </p>
+      </section>
+
+      <!-- Contributions -->
+      <section class="container panel reveal" id="contributions">
+        <p class="section-kicker">Originality</p>
+        <h2 data-i18n="contrib_title">Seven Framework Contributions</h2>
+        <div class="contrib-grid">
+          <div class="contrib-card">
+            <span class="contrib-num">1</span>
+            <h3 data-i18n="c_t1">Scissor argument</h3>
+            <p data-i18n="c_d1">3 PINN ceilings + 4 world-model ceilings are pairwise complementary; PIWM resolves all seven.</p>
+          </div>
+          <div class="contrib-card">
+            <span class="contrib-num">2</span>
+            <h3 data-i18n="c_t2">Physical-Constraint-Type axis</h3>
+            <p data-i18n="c_d2">Wave-equation family (MRI / CT / US) vs. mechanical-equation family (tumor / tissue / cell) — a single axis unifying radiology and pathology.</p>
+          </div>
+          <div class="contrib-card">
+            <span class="contrib-num">3</span>
+            <h3 data-i18n="c_t3">Four integration mechanisms</h3>
+            <p data-i18n="c_d3">Constraint injection, architecture embedding, latent-space regulation, simulation-in-the-loop — each with formal loss / architectural specification.</p>
+          </div>
+          <div class="contrib-card">
+            <span class="contrib-num">4</span>
+            <h3 data-i18n="c_t4">4 × 5 application matrix</h3>
+            <p data-i18n="c_d4">Mechanism × task map with method-annotated cells across reconstruction, segmentation, detection, generation, and report.</p>
+          </div>
+          <div class="contrib-card">
+            <span class="contrib-num">5</span>
+            <h3 data-i18n="c_t5">Capability matrices</h3>
+            <p data-i18n="c_d5">Five-dimension evaluation (radiology + pathology) with literature-grounded PSNR, Dice, AUC, and cross-site benchmarks.</p>
+          </div>
+          <div class="contrib-card">
+            <span class="contrib-num">6</span>
+            <h3 data-i18n="c_t6">Dual-threshold hypothesis</h3>
+            <p data-i18n="c_d6">Falsifiable joint condition: |𝒩[y]| ≤ ε₁ AND Perf_T ≥ ε₂ simultaneously.</p>
+          </div>
+          <div class="contrib-card contrib-card-wide">
+            <span class="contrib-num">7</span>
+            <h3 data-i18n="c_t7">Four-phase technology roadmap</h3>
+            <p data-i18n="c_d7">PINN (2020–2024) → World models (2023–2026) → PIWM (2025–2028) → Clinically trustworthy AI (2027+), with phase-transition gating criteria and seven enabling technologies.</p>
+          </div>
         </div>
       </section>
 
-      <section class="container panel reveal" id="sections">
-        <div class="section-head">
-          <p class="section-kicker">Research Map</p>
-          <h2 data-i18n="core_sections">Core Sections</h2>
-          <p class="help-text">Structured by topic to support fast research scanning and engineering navigation.</p>
-          <p class="help-text" data-i18n="search_help">Use search to quickly locate a section.</p>
+      <!-- Scissor argument visual -->
+      <section class="container panel reveal" id="scissor">
+        <p class="section-kicker">Structural Argument</p>
+        <h2 data-i18n="scissor_title">The Scissor Argument</h2>
+        <p data-i18n="scissor_intro">
+          Where PINN cannot reason semantically, world models can. Where world models cannot guarantee physical consistency, PINN can.
+          Their integration—PIWM—is the natural resolution.
+        </p>
+        <figure class="figure-block">
+          <img src="assets/figures/figure1_landscape.png" alt="Scissor argument and four emergent PIWM capabilities"/>
+          <figcaption data-i18n="fig1_cap"><strong>Figure 1.</strong> The scissor argument and four emergent PIWM capabilities. PINN supplies the physical fidelity that world models lack; world models supply the semantic understanding that PINN lacks.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Mechanisms -->
+      <section class="container panel reveal" id="mechanisms">
+        <p class="section-kicker">Taxonomy</p>
+        <h2 data-i18n="mech_title">Four Integration Mechanisms</h2>
+        <p data-i18n="mech_intro">
+          Each mechanism enforces |𝒩[y]| ≤ ε₁ through a different architectural or training-time strategy. The mechanisms are not mutually
+          exclusive — many systems combine them.
+        </p>
+        <figure class="figure-block">
+          <img src="assets/figures/figure2_mechanisms.png" alt="Four PIWM integration mechanisms"/>
+          <figcaption data-i18n="fig2_cap"><strong>Figure 2.</strong> Architectural patterns and training objectives for the four mechanisms.</figcaption>
+        </figure>
+        <div class="grid cards">
+          <div class="card">
+            <h3 data-i18n="m_t1">① Constraint injection</h3>
+            <p data-i18n="m_d1">Soft, training-time. Physical residual added to the world-model loss. <em>Strength:</em> flexibility. Examples: PhysDiff, DPS-MRI, score-based diffusion priors.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="m_t2">② Architecture embedding</h3>
+            <p data-i18n="m_d2">Hard, structural. Output passes through a physics-encoded operator. <em>Strength:</em> hard guarantee. Examples: Learned Primal-Dual, data-consistency layer, physics-driven diffusion.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="m_t3">③ Latent-space regulation</h3>
+            <p data-i18n="m_d3">Physical constraints applied in latent space. <em>Strength:</em> combines hard physics with semantic latent richness. Examples: ReSample, physics-informed latent diffusion.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="m_t4">④ Simulation-in-the-loop</h3>
+            <p data-i18n="m_d4">Physical simulator generates synthetic training data. <em>Strength:</em> 10–100× data efficiency. Examples: Field II, Bloch dictionary + DRONE, rare-class augmentation.</p>
+          </div>
         </div>
-        <div class="section-meta">
-          <span class="chip">Academic-oriented navigation</span>
-          <span class="chip">Paper + code ecosystem</span>
-          <span class="chip">Continuously curated</span>
+      </section>
+
+      <!-- 4×5 Matrix -->
+      <section class="container panel reveal" id="matrix">
+        <p class="section-kicker">Application Map</p>
+        <h2 data-i18n="matrix_title">PIWM Application Matrix (4 × 5)</h2>
+        <p data-i18n="matrix_intro">
+          Four mechanisms × five medical imaging tasks define a 20-cell map. Densely populated cells indicate mature literature;
+          sparse cells indicate open research opportunities.
+        </p>
+        <figure class="figure-block figure-narrow">
+          <img src="assets/figures/figure5_coverage.png" alt="PIWM coverage matrix"/>
+          <figcaption data-i18n="fig5_cap"><strong>Figure 5.</strong> PIWM coverage matrix; cell saturation scales with literature density. Open cells are research opportunities.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Benchmarks -->
+      <section class="container panel reveal" id="benchmarks">
+        <p class="section-kicker">Empirical</p>
+        <h2 data-i18n="bench_title">Quantitative Benchmarks</h2>
+        <figure class="figure-block">
+          <img src="assets/figures/figure3_benchmarks.png" alt="Quantitative benchmarks"/>
+          <figcaption data-i18n="fig3_cap"><strong>Figure 3.</strong> (a) MRI reconstruction PSNR vs. acceleration on fastMRI; (b) low-dose CT PSNR on AAPM Mayo; (c) segmentation Dice vs. training-set size.</figcaption>
+        </figure>
+        <ul class="findings-list">
+          <li data-i18n="find1"><strong>MRI 8× acceleration:</strong> PIWM (diffusion prior + DC layer) reaches PSNR ≈ 35–37 dB — 1.5–3 dB above pure physics-encoded baselines.</li>
+          <li data-i18n="find2"><strong>Low-dose CT (25% dose):</strong> Learned Primal-Dual reaches PSNR ≈ 33 dB on AAPM Mayo — 1.5–2 dB above FBPConvNet.</li>
+          <li data-i18n="find3"><strong>Data efficiency:</strong> MR fingerprinting reaches clinical-grade T₁/T₂ at N ≈ 50 vs. N &gt; 5,000 for non-physics baselines — a 100× multiplier.</li>
+          <li data-i18n="find4"><strong>OOD robustness:</strong> Foundation-model-augmented PIWM reduces cross-vendor MRI degradation to ≤ 1 dB.</li>
+          <li data-i18n="find5"><strong>Regulatory signature:</strong> No pure-world-model reconstruction system has received FDA clearance for primary diagnostic use; multiple PIWM-adjacent systems have.</li>
+        </ul>
+      </section>
+
+      <!-- Roadmap -->
+      <section class="container panel reveal" id="roadmap">
+        <p class="section-kicker">Trajectory</p>
+        <h2 data-i18n="road_title">Four-Phase Technology Roadmap</h2>
+        <figure class="figure-block">
+          <img src="assets/figures/figure4_roadmap.png" alt="Four-phase technology roadmap"/>
+          <figcaption data-i18n="fig4_cap"><strong>Figure 4.</strong> Four-phase roadmap toward clinically trustworthy medical imaging AI; phase boundaries overlap rather than succeed each other discretely.</figcaption>
+        </figure>
+        <div class="phase-grid">
+          <div class="phase-card phase-1">
+            <p class="phase-period">2020–2024</p>
+            <h3 data-i18n="p1_t">Phase 1 — PINN imaging AI</h3>
+            <p data-i18n="p1_d">Vendor-deployed physics-encoded MRI reconstruction with FDA 510(k) clearance.</p>
+          </div>
+          <div class="phase-card phase-2">
+            <p class="phase-period">2023–2026</p>
+            <h3 data-i18n="p2_t">Phase 2 — World models</h3>
+            <p data-i18n="p2_d">Medical foundation models (UNI, CONCH, Virchow, Prov-GigaPath); Medical World Model (MeWM).</p>
+          </div>
+          <div class="phase-card phase-3">
+            <p class="phase-period">2025–2028</p>
+            <h3 data-i18n="p3_t">Phase 3 — PIWM</h3>
+            <p data-i18n="p3_d">Integrated paradigm satisfying ε₁ ∧ ε₂ for selected radiology tasks; pathology PIWM emerging.</p>
+          </div>
+          <div class="phase-card phase-4">
+            <p class="phase-period">2027+</p>
+            <h3 data-i18n="p4_t">Phase 4 — Clinically trustworthy AI</h3>
+            <p data-i18n="p4_d">FDA / EU MDR clearances with auditable physical constraints; routine clinical deployment.</p>
+          </div>
         </div>
-        <input id="section-search" class="search" type="text" placeholder="Search sections, e.g. diffusion / benchmark / pathology" />
+      </section>
+
+      <!-- Dual threshold -->
+      <section class="container panel reveal" id="dual">
+        <p class="section-kicker">Falsifiable Hypothesis</p>
+        <h2 data-i18n="dual_title">Dual-Threshold Paradigm-Shift Condition</h2>
+        <blockquote class="dual-quote">
+          <p data-i18n="dual_p1">A medical imaging AI system <em>S</em> satisfies the PIWM paradigm-shift condition if and only if:</p>
+          <p data-i18n="dual_p2"><strong>(i) Physical-fidelity threshold:</strong> |𝒩[y]| ≤ ε₁ — e.g., MRI k-space residual ≤ 0.01, CT Radon residual ≤ 0.02, biomechanical equilibrium residual ≤ 0.05.</p>
+          <p data-i18n="dual_p3"><strong>(ii) Semantic-accuracy threshold:</strong> Perf_T ≥ ε₂ — e.g., Dice ≥ 0.90, AUC ≥ 0.85, PSNR ≥ 35 dB.</p>
+          <p data-i18n="dual_p4">The two thresholds are <strong>jointly</strong> required. Pure PINN clears (i) only; pure world models approach (ii) only; PIWM is the first framework with structural capacity to satisfy both simultaneously.</p>
+        </blockquote>
+      </section>
+
+      <!-- Resources -->
+      <section class="container panel reveal" id="resources">
+        <p class="section-kicker">Companion Curation</p>
+        <h2 data-i18n="res_title">Curated Resource Collection</h2>
+        <p data-i18n="res_intro">
+          The eight curated lists mirror the survey's organization — readers can locate primary sources for any cell of the application or capability matrices.
+        </p>
+        <input id="section-search" class="search" type="text" placeholder="Search lists — e.g. diffusion, fastMRI, pathology, foundation" />
         <div class="grid cards" id="section-cards">
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/01-foundations.md"><h3 data-i18n="c1_t">Foundations</h3><p data-i18n="c1_d">Milestone papers and core concepts.</p></a>
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/02-piwm-methods.md"><h3 data-i18n="c2_t">PIWM Methods</h3><p data-i18n="c2_d">Physics-informed and priors-aware approaches.</p></a>
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/03-datasets-and-environments.md"><h3 data-i18n="c3_t">Datasets</h3><p data-i18n="c3_d">Bench datasets and simulators.</p></a>
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/04-benchmarks-and-evaluation.md"><h3 data-i18n="c4_t">Evaluation</h3><p data-i18n="c4_d">Metrics, protocols, and benchmark tasks.</p></a>
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/05-open-source-and-toolkits.md"><h3 data-i18n="c5_t">Open Source</h3><p data-i18n="c5_d">Frameworks, codebases, and tooling.</p></a>
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/06-chinese-first-resources.md"><h3 data-i18n="c6_t">Chinese-First</h3><p data-i18n="c6_d">Chinese resources with bilingual anchors.</p></a>
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/07-surveys-and-roadmaps.md"><h3 data-i18n="c7_t">Surveys</h3><p data-i18n="c7_d">Taxonomies, roadmaps, and open problems.</p></a>
-          <a class="card" href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/blob/main/lists/08-reproducibility-and-engineering.md"><h3 data-i18n="c8_t">Engineering</h3><p data-i18n="c8_d">Reproducibility and practical workflows.</p></a>
-        </div>
-      </section>
-
-      <section class="container panel reveal" id="featured">
-        <h2 data-i18n="featured_title">Papers by Topic (Paper + Code)</h2>
-        <p class="help-text">Awesome-style grouped papers with direct Paper and Code links.</p>
-        <div class="hero-meta" id="homepage-paper-stats">
-          <span class="chip" id="hp-total">Total Papers: --</span>
-          <span class="chip" id="hp-code">With Code: --</span>
-          <span class="chip" id="hp-updated">Updated: --</span>
+          <a class="card" href="lists/01-foundations.md"><h3 data-i18n="c1_t">01 · Foundations</h3><p data-i18n="c1_d">World models, PINN, neural operators, diffusion, foundation models.</p></a>
+          <a class="card" href="lists/02-piwm-methods.md"><h3 data-i18n="c2_t">02 · PIWM Methods</h3><p data-i18n="c2_d">Methods organized by the four integration mechanisms.</p></a>
+          <a class="card" href="lists/03-datasets-and-environments.md"><h3 data-i18n="c3_t">03 · Datasets</h3><p data-i18n="c3_d">fastMRI, AAPM Mayo, TCGA, MSD, simulator suites.</p></a>
+          <a class="card" href="lists/04-benchmarks-and-evaluation.md"><h3 data-i18n="c4_t">04 · Benchmarks</h3><p data-i18n="c4_d">Metrics for ε₁ and ε₂; cross-site protocols.</p></a>
+          <a class="card" href="lists/05-open-source-and-toolkits.md"><h3 data-i18n="c5_t">05 · Open Source</h3><p data-i18n="c5_d">Field II, k-Wave, FEniCS, MONAI Generative.</p></a>
+          <a class="card" href="lists/06-chinese-first-resources.md"><h3 data-i18n="c6_t">06 · Chinese-First</h3><p data-i18n="c6_d">中文资源与双语锚点。</p></a>
+          <a class="card" href="lists/07-surveys-and-roadmaps.md"><h3 data-i18n="c7_t">07 · Surveys</h3><p data-i18n="c7_d">Adjacent and competing surveys.</p></a>
+          <a class="card" href="lists/08-reproducibility-and-engineering.md"><h3 data-i18n="c8_t">08 · Engineering</h3><p data-i18n="c8_d">Reproducibility, federated learning, regulatory templates.</p></a>
         </div>
         <div class="hero-actions">
-          <a class="btn" href="papers/all-papers.html">Open Full Paper Index</a>
-          <a class="btn" href="ALL_PAPERS.md">Open Awesome Markdown</a>
-        </div>
-        <div class="paper-preview-grid">
-          <article class="paper-preview-card">
-            <h3>Foundations</h3>
-            <ul class="paper-preview-list">
-              <li>DreamerV3 (2023) <a class="badge-link badge-paper" href="https://arxiv.org/abs/2301.04104">Paper</a> <a class="badge-link badge-code" href="https://github.com/danijar/dreamerv3">Code</a></li>
-              <li>World Models (2018) <a class="badge-link badge-paper" href="https://papers.nips.cc/paper_files/paper/2018/hash/2de5d16682c3c35007e4e92982f1a2ba-Abstract.html">Paper</a> <a class="badge-link badge-code" href="https://worldmodels.github.io/">Code</a></li>
-              <li>A Path Towards AMI (2022) <a class="badge-link badge-paper" href="https://openreview.net/forum?id=BZ5a1r-kVsf">Paper</a></li>
-            </ul>
-          </article>
-          <article class="paper-preview-card">
-            <h3>PIWM Methods</h3>
-            <ul class="paper-preview-list">
-              <li>Physics-Informed LDM MRI (2024) <a class="badge-link badge-paper" href="https://arxiv.org/abs/2406.19263">Paper</a></li>
-              <li>Medical World Model (2025) <a class="badge-link badge-paper" href="https://arxiv.org/abs/2507.01484">Paper</a></li>
-              <li>Physics-Informed 3D MRI (2024) <a class="badge-link badge-paper" href="https://arxiv.org/abs/2406.11185">Paper</a></li>
-            </ul>
-          </article>
-          <article class="paper-preview-card">
-            <h3>Foundation Models</h3>
-            <ul class="paper-preview-list">
-              <li>Segment Anything (2023) <a class="badge-link badge-paper" href="https://arxiv.org/abs/2304.02643">Paper</a> <a class="badge-link badge-code" href="https://github.com/facebookresearch/segment-anything">Code</a></li>
-              <li>MedSAM (2024) <a class="badge-link badge-paper" href="https://www.nature.com/articles/s41467-024-44824-z">Paper</a> <a class="badge-link badge-code" href="https://github.com/bowang-lab/MedSAM">Code</a></li>
-              <li>BiomedCLIP (2023) <a class="badge-link badge-paper" href="https://arxiv.org/abs/2303.00915">Paper</a> <a class="badge-link badge-code" href="https://github.com/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224">Code</a></li>
-            </ul>
-          </article>
+          <a class="btn" href="ALL_PAPERS.md">All Papers (Markdown)</a>
+          <a class="btn" href="papers/all-papers.html">All Papers (HTML)</a>
+          <a class="btn" href="lists/index.html">Lists Index</a>
+          <a class="btn" href="CONTRIBUTING.md">Contribute</a>
         </div>
       </section>
 
-      <section class="container panel reveal">
-        <h2 data-i18n="contrib_focus">Contribution Focus</h2>
-        <ul>
-          <li data-i18n="f1">Primary-source links (papers, official docs, official repos)</li>
-          <li data-i18n="f2">One-line neutral summary for each entry</li>
-          <li data-i18n="f3">Strong practical signal for research or implementation</li>
-          <li data-i18n="f4">Use entry tags like <code>[Paper]</code>, <code>[Code]</code>, <code>[Data]</code>, <code>[Survey]</code></li>
-        </ul>
-        <a class="btn" href="CONTRIBUTING.md" data-i18n="contrib_guide">Contribution Guide</a>
-      </section>
-
-      <section class="container panel reveal">
-        <h2 data-i18n="index_title">Lists Index</h2>
-        <p data-i18n="index_desc">Use the searchable index page to scan all lists quickly.</p>
-        <a class="btn" href="lists/index.html" data-i18n="open_index">Open Lists Index</a>
+      <!-- Citation -->
+      <section class="container panel reveal" id="citation">
+        <p class="section-kicker">Citation</p>
+        <h2 data-i18n="cite_title">Cite this work</h2>
+        <pre class="cite-block"><code>@article{piwm_survey_2026,
+  title  = {Physics-Informed World Models for Medical Imaging:
+            A Survey and Technology Roadmap},
+  author = {Wang, Zhifeng and {collaborators TBA}},
+  journal= {Proc. IEEE (under review)},
+  year   = {2026},
+  note   = {Survey introducing the PIWM paradigm, four integration
+            mechanisms, 5-dim capability matrices, and a four-phase
+            technology roadmap toward clinically trustworthy AI.}
+}</code></pre>
       </section>
     </main>
 
     <footer class="container footer">
-      <p>Built for GitHub Pages. Licensed under MIT.</p>
+      <p>© 2026 · MIT-licensed code · Content available for research and teaching with attribution.</p>
+      <p><a href="https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models">GitHub repository</a> · <a href="CHANGELOG.md">Changelog</a> · <a href="LICENSE">License</a></p>
     </footer>
 
     <script src="assets/main.js"></script>
