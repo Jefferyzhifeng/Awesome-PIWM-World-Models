@@ -1,15 +1,15 @@
 (() => {
   const i18n = {
     en: {
-      kicker: 'Survey · Proc. IEEE (under review)',
+      kicker: 'Survey · Working Manuscript',
       title: 'Physics-Informed World Models for Medical Imaging',
       subtitle: 'A Survey and Technology Roadmap — formalizing the integration of Physics-Informed Neural Networks and World Models for clinically trustworthy medical imaging AI.',
       chip_pages: '52 pages',
       chip_refs: '265 references',
       chip_figs: '5 figures',
-      chip_target: 'Target: Proc. IEEE',
+      chip_status: 'Working draft',
       read_abstract: 'Read Abstract',
-      open_readme: 'Open README',
+      view_contrib: 'View Contributions',
       browse_resources: 'Browse Resources',
       github_btn: 'GitHub',
 
@@ -100,19 +100,18 @@
       c8_t: '08 · Engineering',
       c8_d: 'Reproducibility, federated learning, regulatory templates.',
 
-      cite_title: 'Cite this work',
       search_placeholder: 'Search lists — e.g. diffusion, fastMRI, pathology, foundation'
     },
     zh: {
-      kicker: '综述 · Proc. IEEE 审稿中',
+      kicker: '综述 · 工作稿',
       title: '面向医学影像的物理信息世界模型综述',
       subtitle: '综述与技术路线图——形式化整合物理信息神经网络（PINN）与世界模型，迈向临床可信的医学影像 AI。',
       chip_pages: '52 页',
       chip_refs: '265 条参考文献',
       chip_figs: '5 张图',
-      chip_target: '目标期刊：Proc. IEEE',
+      chip_status: '工作稿',
       read_abstract: '阅读摘要',
-      open_readme: '打开 README',
+      view_contrib: '查看贡献',
       browse_resources: '浏览资源',
       github_btn: 'GitHub',
 
@@ -203,7 +202,6 @@
       c8_t: '08 · 工程化',
       c8_d: '复现、联邦学习、监管模板。',
 
-      cite_title: '引用本工作',
       search_placeholder: '搜索列表——例如 diffusion、fastMRI、pathology、foundation'
     }
   };

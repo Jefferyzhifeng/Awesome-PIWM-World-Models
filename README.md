@@ -7,8 +7,7 @@
 [![Markdown Lint](https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/actions/workflows/markdown-lint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **Target venue:** *Proceedings of the IEEE*
-> **Status:** Manuscript complete · 52 pages · 265 references · 5 figures
+> **Status:** Working manuscript · 52 pages · 265 references · 5 figures
 > **Companion to:** the curated [Awesome-PIWM resource lists](#part-b--curated-resource-collection) maintained in this repository
 
 ---
@@ -42,8 +41,6 @@ Medical imaging AI is converging from two previously separate streams. Physics-I
   - [Eight thematic lists](#eight-thematic-lists)
   - [Awesome paper index](#awesome-paper-index)
   - [Suggested reading timeline](#suggested-reading-timeline)
-- [Citation](#citation)
-- [Contributing](#contributing)
 - [License and contact](#license-and-contact)
 
 ---
@@ -184,7 +181,7 @@ The hypothesis is **falsifiable**: it predicts that pure PINN and pure world mod
 | Figures (vector PDFs) | [`assets/figures/pdf/`](assets/figures/pdf) | PDF |
 | Figures (web PNGs) | [`assets/figures/`](assets/figures) | PNG |
 
-> The full manuscript source lives in a private companion repository while under review at *Proceedings of the IEEE*. The 5 figures, the 7-contribution framework, the four-mechanism taxonomy, the 4×5 application matrix, and the four-phase roadmap are **publicly released** under this repository.
+> The full manuscript source lives in a private companion repository. The 5 figures, the 7-contribution framework, the four-mechanism taxonomy, the 4×5 application matrix, and the four-phase roadmap are **publicly released** under this repository.
 
 ---
 
@@ -222,36 +219,9 @@ The curated resource side of this repository is structured to **mirror the surve
 
 ---
 
-## Citation
-
-If you reference the survey framework or this resource collection, please cite:
-
-```bibtex
-@article{piwm_survey_2026,
-  title  = {Physics-Informed World Models for Medical Imaging: A Survey and Technology Roadmap},
-  author = {Wang, Zhifeng and {collaborators TBA}},
-  journal= {Proc. IEEE (under review)},
-  year   = {2026},
-  note   = {Survey introducing the PIWM paradigm, four integration mechanisms,
-            5-dimension capability matrices, and a four-phase technology roadmap.
-            Open companion at https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models}
-}
-```
-
-## Contributing
-
-Contributions are warmly welcomed. We especially seek:
-
-1. **Pathology PIWM additions** — the 4×5 matrix's pathology row is sparse (Table 4 in the survey). Concrete works applying physics priors to pathology image analysis are high-priority.
-2. **Reproducibility studies** — code releases, replicable benchmark numbers, and external validations of cited works.
-3. **Cross-vendor / cross-institution evaluations** — empirical data points for the OOD-generalization dimension.
-4. **Chinese-language anchor resources** — see [06-chinese-first-resources](lists/06-chinese-first-resources.md).
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) before submitting PRs. By contributing, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
-
 ## License and contact
 
-- **Content & figures:** © the authors. Figures and tables may be reused for research, teaching, and review with attribution to this repository and the upcoming *Proc. IEEE* article.
+- **Content & figures:** © the authors. Figures and tables may be reused for research, teaching, and review with attribution to this repository.
 - **Code (Python converters, CSS, JS):** [MIT License](LICENSE).
 - **Issues & discussion:** [GitHub Issues](https://github.com/Jefferyzhifeng/Awesome-PIWM-World-Models/issues).
 - **Website:** [https://jefferyzhifeng.github.io/Awesome-PIWM-World-Models/](https://jefferyzhifeng.github.io/Awesome-PIWM-World-Models/)
