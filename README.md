@@ -14,7 +14,7 @@
 ---
 
 <p align="center">
-  <img src="assets/figures/hero_overview.png" alt="PIWM Overview" width="92%"/>
+  <img src="assets/figures/overview.png" alt="PIWM Survey — overview at a glance" width="92%"/>
 </p>
 
 This repository is the **open companion** to the survey *"Physics-Informed World Models for Medical Imaging: A Survey and Technology Roadmap."* It hosts (A) the survey content and figures, and (B) a continuously curated resource collection of PIWM-relevant papers, datasets, benchmarks, and tooling. Together, parts (A) and (B) constitute a living research map of the emerging intersection between **Physics-Informed Neural Networks (PINN)** and **World Models** in medical imaging.

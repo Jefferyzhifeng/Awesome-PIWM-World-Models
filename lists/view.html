@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIWM List Viewer</title>
+    <meta name="description" content="Curated PIWM resource list, rendered as a web page." />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/view.css" />
+    <!-- marked.js for client-side Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+    <!-- DOMPurify for safe HTML sanitization -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+  </head>
+  <body class="view-body">
+    <nav class="top-nav" id="top-nav">
+      <div class="container top-nav-inner">
+        <a class="top-brand" href="../index.html">← PIWM Survey</a>
+        <div class="top-links">
+          <a href="../index.html#abstract">Abstract</a>
+          <a href="../index.html#mechanisms">Mechanisms</a>
+          <a href="../index.html#matrix">Matrix</a>
+          <a href="../index.html#roadmap">Roadmap</a>
+          <a href="index.html">All Lists</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="view-hero">
+      <div class="container">
+        <p class="kicker" id="view-kicker">Curated Resource List</p>
+        <h1 id="view-title">Loading…</h1>
+        <p class="subtitle" id="view-subtitle">Fetching list content…</p>
+        <div class="view-toc-bar">
+          <span class="chip" id="view-count">— sections</span>
+          <span class="chip" id="view-items">— items</span>
+          <a class="chip chip-link" id="view-source" href="#" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="view-layout container">
+      <aside class="view-toc" id="view-toc">
+        <p class="toc-title">On this page</p>
+        <ul id="toc-list"><li class="toc-loading">…</li></ul>
+      </aside>
+
+      <main class="view-content panel" id="view-content">
+        <article class="view-article" id="view-article">
+          <p class="view-loading">Loading markdown…</p>
+        </article>
+
+        <nav class="view-pager" id="view-pager">
+          <a class="pager-link pager-prev" id="pager-prev" href="#">← Previous list</a>
+          <a class="pager-link pager-next" id="pager-next" href="#">Next list →</a>
+        </nav>
+
+        <div class="view-footer-actions">
+          <a class="btn" id="view-back" href="index.html">← All Lists</a>
+          <a class="btn" href="../index.html">Home</a>
+          <a class="btn" id="view-edit" href="#" target="_blank" rel="noopener">Edit on GitHub</a>
+        </div>
+      </main>
+    </div>
+
+    <footer class="container footer">
+      <p>© 2026 · MIT-licensed code · Content available for research and teaching with attribution.</p>
+    </footer>
+
+    <script src="../assets/view.js"></script>
+  </body>
+</html>

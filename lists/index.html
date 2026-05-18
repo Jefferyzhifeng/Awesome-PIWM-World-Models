@@ -4,32 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PIWM Lists Index</title>
+    <meta name="description" content="Index of eight curated PIWM resource lists." />
     <link rel="stylesheet" href="../assets/style.css" />
   </head>
   <body>
-    <main class="container" style="padding-top: 28px; padding-bottom: 38px;">
-      <section class="panel">
-        <h1 style="font-size: 1.9rem; margin-bottom: 8px;">PIWM Lists Index</h1>
-        <p class="help-text">Search and jump to any list quickly.</p>
-        <input id="list-search" class="search" type="text" placeholder="Search lists, e.g. methods / datasets / survey" />
-        <div class="grid cards" id="list-cards">
-          <a class="card" href="01-foundations.md"><h3>01 Foundations and Milestones</h3><p>Core ideas and milestones.</p></a>
-          <a class="card" href="02-piwm-methods.md"><h3>02 PIWM Methods</h3><p>Constraint mechanisms and representative methods.</p></a>
-          <a class="card" href="03-datasets-and-environments.md"><h3>03 Datasets and Environments</h3><p>Benchmarks and simulation environments.</p></a>
-          <a class="card" href="04-benchmarks-and-evaluation.md"><h3>04 Benchmarks and Evaluation</h3><p>Metrics and benchmark protocols.</p></a>
-          <a class="card" href="05-open-source-and-toolkits.md"><h3>05 Open Source and Toolkits</h3><p>Reusable frameworks and engineering tools.</p></a>
-          <a class="card" href="06-chinese-first-resources.md"><h3>06 Chinese-First Resources</h3><p>Chinese-focused learning and bilingual anchors.</p></a>
-          <a class="card" href="07-surveys-and-roadmaps.md"><h3>07 Surveys and Roadmaps</h3><p>Survey coverage and research roadmaps.</p></a>
-          <a class="card" href="08-reproducibility-and-engineering.md"><h3>08 Reproducibility and Engineering</h3><p>Reproducible workflows and governance references.</p></a>
+    <nav class="top-nav">
+      <div class="container top-nav-inner">
+        <a class="top-brand" href="../index.html">← PIWM Survey</a>
+        <div class="top-links">
+          <a href="../index.html#abstract">Abstract</a>
+          <a href="../index.html#mechanisms">Mechanisms</a>
+          <a href="../index.html#matrix">Matrix</a>
+          <a href="../index.html#roadmap">Roadmap</a>
+          <a href="../index.html#resources">Resources</a>
         </div>
-        <p style="margin-top: 14px;"><a class="btn" href="../index.html">Back to Homepage</a></p>
-      </section>
+      </div>
+    </nav>
+
+    <header class="view-hero">
+      <div class="container">
+        <p class="kicker">Resources</p>
+        <h1>Curated Resource Lists</h1>
+        <p class="subtitle">Eight thematic lists mirroring the survey's organization. Each list opens as a web page with table of contents.</p>
+        <input id="list-search" class="search" type="text" placeholder="Search lists — e.g. methods, datasets, survey, pathology" />
+      </div>
+    </header>
+
+    <main class="container" style="padding-top: 24px; padding-bottom: 36px;">
+      <div class="grid cards resource-cards" id="list-cards">
+        <a class="card resource-card" href="view.html?list=01-foundations">
+          <span class="resource-badge">01</span>
+          <h3>Foundations and Milestones</h3>
+          <p>Core ideas and milestones — world models, PINN, neural operators, diffusion, foundation models.</p>
+        </a>
+        <a class="card resource-card" href="view.html?list=02-piwm-methods">
+          <span class="resource-badge">02</span>
+          <h3>PIWM Methods</h3>
+          <p>Constraint mechanisms and representative methods organized by the four integration mechanisms.</p>
+        </a>
+        <a class="card resource-card" href="view.html?list=03-datasets-and-environments">
+          <span class="resource-badge">03</span>
+          <h3>Datasets and Environments</h3>
+          <p>Benchmark datasets (fastMRI, AAPM Mayo, TCGA, MSD) and physical simulation environments.</p>
+        </a>
+        <a class="card resource-card" href="view.html?list=04-benchmarks-and-evaluation">
+          <span class="resource-badge">04</span>
+          <h3>Benchmarks and Evaluation</h3>
+          <p>Metrics for ε₁ and ε₂; cross-site protocols and benchmark tasks.</p>
+        </a>
+        <a class="card resource-card" href="view.html?list=05-open-source-and-toolkits">
+          <span class="resource-badge">05</span>
+          <h3>Open Source and Toolkits</h3>
+          <p>Reusable frameworks and engineering tools — Field II, k-Wave, FEniCS, MONAI Generative.</p>
+        </a>
+        <a class="card resource-card" href="view.html?list=06-chinese-first-resources">
+          <span class="resource-badge">06</span>
+          <h3>Chinese-First Resources</h3>
+          <p>Chinese-focused learning materials with bilingual anchors.</p>
+        </a>
+        <a class="card resource-card" href="view.html?list=07-surveys-and-roadmaps">
+          <span class="resource-badge">07</span>
+          <h3>Surveys and Roadmaps</h3>
+          <p>Adjacent and competing surveys; technology roadmaps.</p>
+        </a>
+        <a class="card resource-card" href="view.html?list=08-reproducibility-and-engineering">
+          <span class="resource-badge">08</span>
+          <h3>Reproducibility and Engineering</h3>
+          <p>Reproducible workflows, federated learning, regulatory templates.</p>
+        </a>
+      </div>
+      <p style="margin-top: 18px;"><a class="btn" href="../index.html">← Back to Homepage</a></p>
     </main>
+
+    <footer class="container footer">
+      <p>© 2026 · MIT-licensed code · Content available for research and teaching with attribution.</p>
+    </footer>
 
     <script>
       (() => {
         const input = document.querySelector('#list-search');
-        const cards = Array.from(document.querySelectorAll('#list-cards .card'));
+        const cards = Array.from(document.querySelectorAll('#list-cards .resource-card'));
         if (!input || cards.length === 0) return;
         input.addEventListener('input', () => {
           const query = input.value.trim().toLowerCase();

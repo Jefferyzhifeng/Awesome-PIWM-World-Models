@@ -10,7 +10,7 @@
     />
     <meta property="og:title" content="Physics-Informed World Models for Medical Imaging — A Survey" />
     <meta property="og:description" content="Scissor argument, four integration mechanisms, 4×5 application matrix, five-dimension capability matrices, and a four-phase technology roadmap." />
-    <meta property="og:image" content="assets/figures/hero_overview.png" />
+    <meta property="og:image" content="assets/figures/overview.png" />
     <meta property="og:type" content="article" />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
@@ -50,9 +50,9 @@
           <span class="chip" data-i18n="chip_target">Target: Proc. IEEE</span>
         </div>
 
-        <p>
-          <img class="overview-img" src="assets/figures/hero_overview.png" alt="PIWM overview hero image" />
-        </p>
+        <figure class="hero-figure">
+          <img class="overview-img" src="assets/figures/overview.png" alt="PIWM overview — survey at a glance" />
+        </figure>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#abstract" data-i18n="read_abstract">Read Abstract</a>
@@ -90,45 +90,70 @@
 
       <!-- Contributions -->
       <section class="container panel reveal" id="contributions">
-        <p class="section-kicker">Originality</p>
-        <h2 data-i18n="contrib_title">Seven Framework Contributions</h2>
-        <div class="contrib-grid">
-          <div class="contrib-card">
-            <span class="contrib-num">1</span>
-            <h3 data-i18n="c_t1">Scissor argument</h3>
-            <p data-i18n="c_d1">3 PINN ceilings + 4 world-model ceilings are pairwise complementary; PIWM resolves all seven.</p>
-          </div>
-          <div class="contrib-card">
-            <span class="contrib-num">2</span>
-            <h3 data-i18n="c_t2">Physical-Constraint-Type axis</h3>
-            <p data-i18n="c_d2">Wave-equation family (MRI / CT / US) vs. mechanical-equation family (tumor / tissue / cell) — a single axis unifying radiology and pathology.</p>
-          </div>
-          <div class="contrib-card">
-            <span class="contrib-num">3</span>
-            <h3 data-i18n="c_t3">Four integration mechanisms</h3>
-            <p data-i18n="c_d3">Constraint injection, architecture embedding, latent-space regulation, simulation-in-the-loop — each with formal loss / architectural specification.</p>
-          </div>
-          <div class="contrib-card">
-            <span class="contrib-num">4</span>
-            <h3 data-i18n="c_t4">4 × 5 application matrix</h3>
-            <p data-i18n="c_d4">Mechanism × task map with method-annotated cells across reconstruction, segmentation, detection, generation, and report.</p>
-          </div>
-          <div class="contrib-card">
-            <span class="contrib-num">5</span>
-            <h3 data-i18n="c_t5">Capability matrices</h3>
-            <p data-i18n="c_d5">Five-dimension evaluation (radiology + pathology) with literature-grounded PSNR, Dice, AUC, and cross-site benchmarks.</p>
-          </div>
-          <div class="contrib-card">
-            <span class="contrib-num">6</span>
-            <h3 data-i18n="c_t6">Dual-threshold hypothesis</h3>
-            <p data-i18n="c_d6">Falsifiable joint condition: |𝒩[y]| ≤ ε₁ AND Perf_T ≥ ε₂ simultaneously.</p>
-          </div>
-          <div class="contrib-card contrib-card-wide">
-            <span class="contrib-num">7</span>
-            <h3 data-i18n="c_t7">Four-phase technology roadmap</h3>
-            <p data-i18n="c_d7">PINN (2020–2024) → World models (2023–2026) → PIWM (2025–2028) → Clinically trustworthy AI (2027+), with phase-transition gating criteria and seven enabling technologies.</p>
-          </div>
+        <div class="section-head">
+          <p class="section-kicker">Originality</p>
+          <h2 data-i18n="contrib_title">Seven Framework Contributions</h2>
+          <p class="section-sub" data-i18n="contrib_sub">Each contribution is original to this survey and traceable to a specific chapter and table in the manuscript.</p>
         </div>
+
+        <ol class="contrib-list">
+          <li class="contrib-item">
+            <div class="contrib-marker"><span>01</span><span class="contrib-icon" aria-hidden="true">✂</span></div>
+            <div class="contrib-body">
+              <h3 data-i18n="c_t1">Scissor argument</h3>
+              <p data-i18n="c_d1">Three PINN ceilings + four world-model ceilings are pairwise complementary; PIWM is the natural integration that resolves all seven simultaneously.</p>
+              <span class="contrib-tag">Chs. 3–5 · Table 1</span>
+            </div>
+          </li>
+          <li class="contrib-item">
+            <div class="contrib-marker"><span>02</span><span class="contrib-icon" aria-hidden="true">⟷</span></div>
+            <div class="contrib-body">
+              <h3 data-i18n="c_t2">Physical-Constraint-Type axis</h3>
+              <p data-i18n="c_d2">Wave-equation family (MRI / CT / US) vs. mechanical-equation family (tumor / tissue / cell) — a single axis unifying radiology and pathology under one framework.</p>
+              <span class="contrib-tag">Ch. 2.4</span>
+            </div>
+          </li>
+          <li class="contrib-item">
+            <div class="contrib-marker"><span>03</span><span class="contrib-icon" aria-hidden="true">◫</span></div>
+            <div class="contrib-body">
+              <h3 data-i18n="c_t3">Four integration mechanisms</h3>
+              <p data-i18n="c_d3">Constraint injection, architecture embedding, latent-space regulation, simulation-in-the-loop — each formalized with explicit loss-function and architectural specifications.</p>
+              <span class="contrib-tag">Ch. 5.1 · Table 2a</span>
+            </div>
+          </li>
+          <li class="contrib-item">
+            <div class="contrib-marker"><span>04</span><span class="contrib-icon" aria-hidden="true">⊞</span></div>
+            <div class="contrib-body">
+              <h3 data-i18n="c_t4">4 × 5 application matrix</h3>
+              <p data-i18n="c_d4">Mechanism × task map with method-annotated cells across reconstruction, segmentation, detection, generation, and report generation.</p>
+              <span class="contrib-tag">Ch. 5.2 · Table 2</span>
+            </div>
+          </li>
+          <li class="contrib-item">
+            <div class="contrib-marker"><span>05</span><span class="contrib-icon" aria-hidden="true">▦</span></div>
+            <div class="contrib-body">
+              <h3 data-i18n="c_t5">Capability matrices</h3>
+              <p data-i18n="c_d5">Five-dimension evaluation for radiology and pathology separately, with literature-grounded PSNR, Dice, AUC, and cross-site benchmark values.</p>
+              <span class="contrib-tag">Ch. 6 · Tables 3 &amp; 4</span>
+            </div>
+          </li>
+          <li class="contrib-item">
+            <div class="contrib-marker"><span>06</span><span class="contrib-icon" aria-hidden="true">⊕</span></div>
+            <div class="contrib-body">
+              <h3 data-i18n="c_t6">Dual-threshold hypothesis</h3>
+              <p data-i18n="c_d6">Falsifiable joint condition: |𝒩[y]| ≤ ε₁ AND Perf<sub>T</sub> ≥ ε₂ simultaneously. Pure PINN and pure world models cannot satisfy both.</p>
+              <span class="contrib-tag">Ch. 8.1</span>
+            </div>
+          </li>
+          <li class="contrib-item">
+            <div class="contrib-marker"><span>07</span><span class="contrib-icon" aria-hidden="true">→</span></div>
+            <div class="contrib-body">
+              <h3 data-i18n="c_t7">Four-phase technology roadmap</h3>
+              <p data-i18n="c_d7">PINN (2020–2024) → World models (2023–2026) → PIWM (2025–2028) → Clinically trustworthy AI (2027+), with phase-transition gating criteria and seven enabling-technology maturity timelines.</p>
+              <span class="contrib-tag">Ch. 8.2–8.3 · Table 5</span>
+            </div>
+          </li>
+        </ol>
       </section>
 
       <!-- Scissor argument visual -->
@@ -260,18 +285,50 @@
           The eight curated lists mirror the survey's organization — readers can locate primary sources for any cell of the application or capability matrices.
         </p>
         <input id="section-search" class="search" type="text" placeholder="Search lists — e.g. diffusion, fastMRI, pathology, foundation" />
-        <div class="grid cards" id="section-cards">
-          <a class="card" href="lists/01-foundations.md"><h3 data-i18n="c1_t">01 · Foundations</h3><p data-i18n="c1_d">World models, PINN, neural operators, diffusion, foundation models.</p></a>
-          <a class="card" href="lists/02-piwm-methods.md"><h3 data-i18n="c2_t">02 · PIWM Methods</h3><p data-i18n="c2_d">Methods organized by the four integration mechanisms.</p></a>
-          <a class="card" href="lists/03-datasets-and-environments.md"><h3 data-i18n="c3_t">03 · Datasets</h3><p data-i18n="c3_d">fastMRI, AAPM Mayo, TCGA, MSD, simulator suites.</p></a>
-          <a class="card" href="lists/04-benchmarks-and-evaluation.md"><h3 data-i18n="c4_t">04 · Benchmarks</h3><p data-i18n="c4_d">Metrics for ε₁ and ε₂; cross-site protocols.</p></a>
-          <a class="card" href="lists/05-open-source-and-toolkits.md"><h3 data-i18n="c5_t">05 · Open Source</h3><p data-i18n="c5_d">Field II, k-Wave, FEniCS, MONAI Generative.</p></a>
-          <a class="card" href="lists/06-chinese-first-resources.md"><h3 data-i18n="c6_t">06 · Chinese-First</h3><p data-i18n="c6_d">中文资源与双语锚点。</p></a>
-          <a class="card" href="lists/07-surveys-and-roadmaps.md"><h3 data-i18n="c7_t">07 · Surveys</h3><p data-i18n="c7_d">Adjacent and competing surveys.</p></a>
-          <a class="card" href="lists/08-reproducibility-and-engineering.md"><h3 data-i18n="c8_t">08 · Engineering</h3><p data-i18n="c8_d">Reproducibility, federated learning, regulatory templates.</p></a>
+        <div class="grid cards resource-cards" id="section-cards">
+          <a class="card resource-card" href="lists/view.html?list=01-foundations">
+            <span class="resource-badge">01</span>
+            <h3 data-i18n="c1_t">Foundations</h3>
+            <p data-i18n="c1_d">World models, PINN, neural operators, diffusion, foundation models.</p>
+          </a>
+          <a class="card resource-card" href="lists/view.html?list=02-piwm-methods">
+            <span class="resource-badge">02</span>
+            <h3 data-i18n="c2_t">PIWM Methods</h3>
+            <p data-i18n="c2_d">Methods organized by the four integration mechanisms.</p>
+          </a>
+          <a class="card resource-card" href="lists/view.html?list=03-datasets-and-environments">
+            <span class="resource-badge">03</span>
+            <h3 data-i18n="c3_t">Datasets</h3>
+            <p data-i18n="c3_d">fastMRI, AAPM Mayo, TCGA, MSD, simulator suites.</p>
+          </a>
+          <a class="card resource-card" href="lists/view.html?list=04-benchmarks-and-evaluation">
+            <span class="resource-badge">04</span>
+            <h3 data-i18n="c4_t">Benchmarks</h3>
+            <p data-i18n="c4_d">Metrics for ε₁ and ε₂; cross-site protocols.</p>
+          </a>
+          <a class="card resource-card" href="lists/view.html?list=05-open-source-and-toolkits">
+            <span class="resource-badge">05</span>
+            <h3 data-i18n="c5_t">Open Source</h3>
+            <p data-i18n="c5_d">Field II, k-Wave, FEniCS, MONAI Generative.</p>
+          </a>
+          <a class="card resource-card" href="lists/view.html?list=06-chinese-first-resources">
+            <span class="resource-badge">06</span>
+            <h3 data-i18n="c6_t">Chinese-First</h3>
+            <p data-i18n="c6_d">中文资源与双语锚点。</p>
+          </a>
+          <a class="card resource-card" href="lists/view.html?list=07-surveys-and-roadmaps">
+            <span class="resource-badge">07</span>
+            <h3 data-i18n="c7_t">Surveys</h3>
+            <p data-i18n="c7_d">Adjacent and competing surveys.</p>
+          </a>
+          <a class="card resource-card" href="lists/view.html?list=08-reproducibility-and-engineering">
+            <span class="resource-badge">08</span>
+            <h3 data-i18n="c8_t">Engineering</h3>
+            <p data-i18n="c8_d">Reproducibility, federated learning, regulatory templates.</p>
+          </a>
         </div>
         <div class="hero-actions">
-          <a class="btn" href="ALL_PAPERS.md">All Papers (Markdown)</a>
+          <a class="btn btn-primary" href="lists/view.html?list=01-foundations">Start with Foundations</a>
           <a class="btn" href="papers/all-papers.html">All Papers (HTML)</a>
           <a class="btn" href="lists/index.html">Lists Index</a>
           <a class="btn" href="CONTRIBUTING.md">Contribute</a>

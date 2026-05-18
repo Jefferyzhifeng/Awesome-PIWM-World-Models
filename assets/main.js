@@ -20,8 +20,9 @@
       abstract_p3: "The survey formalizes the PIWM paradigm, introduces the physical-constraint-type axis unifying radiology and pathology, develops a taxonomy of four integration mechanisms, maps PIWM coverage across five medical imaging tasks, constructs literature-grounded capability matrices, operationalizes the paradigm-shift claim as a falsifiable dual-threshold hypothesis, and presents a four-phase technology roadmap toward clinically trustworthy AI.",
 
       contrib_title: 'Seven Framework Contributions',
+      contrib_sub: 'Each contribution is original to this survey and traceable to a specific chapter and table in the manuscript.',
       c_t1: 'Scissor argument',
-      c_d1: '3 PINN ceilings + 4 world-model ceilings are pairwise complementary; PIWM resolves all seven.',
+      c_d1: 'Three PINN ceilings + four world-model ceilings are pairwise complementary; PIWM is the natural integration that resolves all seven simultaneously.',
       c_t2: 'Physical-Constraint-Type axis',
       c_d2: 'Wave-equation family (MRI / CT / US) vs. mechanical-equation family (tumor / tissue / cell) — a single axis unifying radiology and pathology.',
       c_t3: 'Four integration mechanisms',
@@ -122,8 +123,9 @@
       abstract_p3: '本综述形式化 PIWM 范式，引入统一放射与病理的物理约束类型轴，构建四种集成机制的分类法，刻画 PIWM 在五大医学影像任务中的覆盖，建立有文献支撑的能力矩阵，将范式转移主张操作化为可证伪的双阈值假设，并提出迈向临床可信 AI 的四阶段技术路线图。',
 
       contrib_title: '七项原创框架贡献',
+      contrib_sub: '每项贡献均为本综述原创，且可追溯到论文的具体章节与表格。',
       c_t1: '剪刀论证',
-      c_d1: 'PINN 三项天花板 + 世界模型四项天花板两两互补；PIWM 同时化解全部七项。',
+      c_d1: 'PINN 三项天花板 + 世界模型四项天花板两两互补；PIWM 是同时化解全部七项的自然整合。',
       c_t2: '物理约束类型轴',
       c_d2: '波动方程族（MRI / CT / US）与力学方程族（肿瘤 / 组织 / 细胞）——统一放射与病理的单一坐标轴。',
       c_t3: '四种集成机制',
