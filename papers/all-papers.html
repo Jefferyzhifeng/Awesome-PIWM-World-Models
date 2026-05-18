@@ -3,16 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Papers by Topic | PIWM Medical Imaging</title>
+    <title>All Papers Collection | PIWM Medical Imaging</title>
     <link rel="stylesheet" href="../assets/style.css" />
+    <style>
+      .paper-accordion details {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        margin-bottom: 12px;
+        overflow: hidden;
+      }
+      .paper-accordion summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 12px 14px;
+        font-weight: 700;
+        color: #102754;
+        background: linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%);
+        border-bottom: 1px solid var(--line);
+      }
+      .paper-accordion summary::-webkit-details-marker { display: none; }
+      .paper-accordion summary::after {
+        content: '▾';
+        float: right;
+        color: #4f6ea8;
+      }
+      .paper-accordion details[open] summary::after { content: '▴'; }
+      .paper-list {
+        margin: 0;
+        padding: 8px 16px 14px;
+      }
+      .paper-list li {
+        margin: 8px 0;
+        color: var(--ink-soft);
+      }
+      .paper-title { color: var(--ink); font-weight: 600; }
+      .paper-meta { color: #4f658f; font-size: 0.9rem; }
+      .paper-link {
+        margin-left: 6px;
+        font-size: 0.9rem;
+      }
+    </style>
   </head>
   <body>
     <main class="container" style="padding-top:28px;padding-bottom:42px;">
       <section class="panel">
-        <h1 style="font-size:1.95rem;margin-bottom:8px;">Papers by Topic (Paper + Code)</h1>
-        <p class="help-text">Awesome-style grouped paper portal for fast reading and implementation-oriented navigation.</p>
+        <h1 style="font-size:1.95rem;margin-bottom:8px;">All Papers Collection</h1>
+        <p class="help-text">Browse all papers as line-by-line entries. Each subfield can be expanded or collapsed.</p>
 
-        <div class="hero-meta" id="paper-stats">
+        <div class="hero-meta">
           <span class="chip" id="paper-total">Total Papers: --</span>
           <span class="chip" id="paper-code">With Code: --</span>
           <span class="chip" id="paper-updated">Updated: --</span>
@@ -20,66 +59,83 @@
 
         <input id="paper-search" class="search" type="text" placeholder="Search by title, topic, modality, or mechanism" />
 
-        <h2 style="margin-top:18px;">Generative World Models</h2>
-        <div class="grid cards topic-block">
-          <a class="card paper-card" data-has-code="1" href="generated/recurrent-world-models-facilitate-policy-evolution.html"><h3>Recurrent World Models Facilitate Policy Evolution (2018)</h3><p>Latent dynamics world model foundation.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/a-path-towards-autonomous-machine-intelligence.html"><h3>A Path Towards Autonomous Machine Intelligence (2022)</h3><p>JEPA roadmap and predictive representation vision.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/dreamerv3.html"><h3>DreamerV3 (2023)</h3><p>Scalable world models across diverse domains.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/genie-generative-interactive-environments.html"><h3>Genie (2024)</h3><p>Generative interactive environments.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/video-generation-models-as-world-simulators-sora.html"><h3>Sora Technical Report (2024)</h3><p>Video models as world simulators.</p></a>
-        </div>
+        <div class="paper-accordion" id="paper-accordion">
+          <details open>
+            <summary>World Model Foundations</summary>
+            <ul class="paper-list">
+              <li data-code="1"><span class="paper-title">Recurrent World Models Facilitate Policy Evolution (2018)</span><span class="paper-link">[<a href="https://papers.nips.cc/paper_files/paper/2018/hash/2de5d16682c3c35007e4e92982f1a2ba-Abstract.html">Paper</a>] [<a href="https://worldmodels.github.io/">Code</a>]</span> <span class="paper-meta">· Latent dynamics world model foundation</span></li>
+              <li data-code="0"><span class="paper-title">A Path Towards Autonomous Machine Intelligence (2022)</span><span class="paper-link">[<a href="https://openreview.net/forum?id=BZ5a1r-kVsf">Paper</a>]</span> <span class="paper-meta">· JEPA roadmap</span></li>
+              <li data-code="1"><span class="paper-title">DreamerV3 (2023)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2301.04104">Paper</a>] [<a href="https://github.com/danijar/dreamerv3">Code</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Genie (2024)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2402.15391">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Sora Technical Report (2024)</span><span class="paper-link">[<a href="https://openai.com/research/video-generation-models-as-world-simulators">Paper</a>]</span></li>
+            </ul>
+          </details>
 
-        <h2 style="margin-top:18px;">Physics-Informed Core Methods</h2>
-        <div class="grid cards topic-block">
-          <a class="card paper-card" data-has-code="0" href="generated/physics-informed-neural-networks.html"><h3>PINNs (2019)</h3><p>Constraint-based PDE learning framework.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/physics-informed-machine-learning.html"><h3>Physics-Informed ML (2021)</h3><p>General principles and method taxonomy.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/fourier-neural-operator.html"><h3>Fourier Neural Operator (2021)</h3><p>Operator learning in spectral domain.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/deeponet.html"><h3>DeepONet (2021)</h3><p>Neural operator approximation framework.</p></a>
-        </div>
+          <details>
+            <summary>Physics-Informed Learning Foundations</summary>
+            <ul class="paper-list">
+              <li data-code="0"><span class="paper-title">Physics-Informed Neural Networks (2019)</span><span class="paper-link">[<a href="https://doi.org/10.1016/j.jcp.2018.10.045">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Physics-Informed Machine Learning (2021)</span><span class="paper-link">[<a href="https://doi.org/10.1038/s42254-021-00314-5">Paper</a>]</span></li>
+              <li data-code="1"><span class="paper-title">Fourier Neural Operator (2021)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2010.08895">Paper</a>] [<a href="https://github.com/zongyi-li/fourier_neural_operator">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">DeepONet (2021)</span><span class="paper-link">[<a href="https://doi.org/10.1038/s42256-021-00302-5">Paper</a>] [<a href="https://github.com/lululxvi/deeponet">Code</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Poseidon (2024)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2405.19101">Paper</a>]</span></li>
+            </ul>
+          </details>
 
-        <h2 style="margin-top:18px;">Diffusion and Inverse Problems</h2>
-        <div class="grid cards topic-block">
-          <a class="card paper-card" data-has-code="1" href="generated/denoising-diffusion-probabilistic-models.html"><h3>DDPM (2020)</h3><p>Diffusion probabilistic modeling foundation.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/score-based-generative-modeling-through-sdes.html"><h3>Score-SDE (2021)</h3><p>Continuous-time score-based generation.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/solving-inverse-problems-with-score-based-models.html"><h3>Score-Based Inverse Problems (2022)</h3><p>Data consistency with diffusion priors.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/resample-latent-diffusion-via-hard-data-consistency.html"><h3>ReSample (2024)</h3><p>Hard data consistency in latent diffusion.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/physics-informed-latent-diffusion-for-mri-synthesis.html"><h3>Physics-Informed LDM MRI (2024)</h3><p>Latent diffusion with physical constraints.</p></a>
-        </div>
+          <details>
+            <summary>Diffusion and Inverse Problems</summary>
+            <ul class="paper-list">
+              <li data-code="1"><span class="paper-title">DDPM (2020)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2006.11239">Paper</a>] [<a href="https://github.com/hojonathanho/diffusion">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">Score-SDE (2021)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2011.13456">Paper</a>] [<a href="https://github.com/yang-song/score_sde_pytorch">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">Score-Based Inverse Problems (2022)</span><span class="paper-link">[<a href="https://openreview.net/forum?id=vaRCHVj0uGI">Paper</a>] [<a href="https://github.com/yang-song/score_inverse_problems">Code</a>]</span></li>
+              <li data-code="0"><span class="paper-title">ReSample (2024)</span><span class="paper-link">[<a href="https://openreview.net/forum?id=j8hdRqOUhN">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Physics-Informed LDM MRI (2024)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2406.19263">Paper</a>]</span></li>
+            </ul>
+          </details>
 
-        <h2 style="margin-top:18px;">Medical PIWM Applications</h2>
-        <div class="grid cards topic-block">
-          <a class="card paper-card" data-has-code="0" href="generated/medical-world-model.html"><h3>Medical World Model (2025)</h3><p>Tumor evolution simulation for planning.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/generative-myocardial-motion-tracking-with-biomechanics-priors.html"><h3>Biomechanics-Informed Myocardial Tracking (2023)</h3><p>Cardiac motion modeling with physical priors.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/brlp-latent-diffusion-prior-knowledge.html"><h3>BrLP (2024)</h3><p>Disease progression with latent diffusion and priors.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/physics-informed-3d-mri-reconstruction-under-free-breathing.html"><h3>Physics-Informed 3D MRI (2024)</h3><p>Robust free-breathing reconstruction.</p></a>
-        </div>
+          <details>
+            <summary>Medical PIWM Applications</summary>
+            <ul class="paper-list">
+              <li data-code="0"><span class="paper-title">Medical World Model (2025)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2507.01484">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Biomechanics-Informed Myocardial Tracking (2023)</span><span class="paper-link">[<a href="https://doi.org/10.1016/j.media.2022.102682">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">BrLP (2024)</span><span class="paper-link">[<a href="https://doi.org/10.1007/978-3-031-72069-7_17">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Physics-Informed 3D MRI Reconstruction (2024)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2406.11185">Paper</a>]</span></li>
+            </ul>
+          </details>
 
-        <h2 style="margin-top:18px;">MRI/CT Reconstruction and Physical Embedding</h2>
-        <div class="grid cards topic-block">
-          <a class="card paper-card" data-has-code="0" href="generated/learning-a-variational-network-for-accelerated-mri.html"><h3>Variational Network MRI (2018)</h3><p>Unrolled physics-consistent reconstruction.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/a-deep-cascade-for-dynamic-mr-reconstruction.html"><h3>Deep Cascade MRI (2018)</h3><p>Data consistency layer family.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/modl-model-based-deep-learning-for-inverse-problems.html"><h3>MoDL (2019)</h3><p>Model-based deep learning for inverse problems.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/learned-primal-dual-reconstruction.html"><h3>Learned Primal-Dual (2018)</h3><p>Operator-aware CT architecture.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/bayesian-mri-reconstruction-with-diffusion-models.html"><h3>Bayesian MRI Diffusion Reconstruction (2023)</h3><p>Probabilistic and physics-aware MRI.</p></a>
-        </div>
+          <details>
+            <summary>MRI/CT Reconstruction and Physical Embedding</summary>
+            <ul class="paper-list">
+              <li data-code="0"><span class="paper-title">Variational Network MRI (2018)</span><span class="paper-link">[<a href="https://doi.org/10.1002/mrm.26977">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Deep Cascade MRI (2018)</span><span class="paper-link">[<a href="https://doi.org/10.1109/TMI.2017.2760978">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">MoDL (2019)</span><span class="paper-link">[<a href="https://doi.org/10.1109/TMI.2018.2865356">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Learned Primal-Dual (2018)</span><span class="paper-link">[<a href="https://doi.org/10.1109/TMI.2018.2799231">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Bayesian MRI Diffusion Reconstruction (2023)</span><span class="paper-link">[<a href="https://doi.org/10.1002/mrm.29626">Paper</a>]</span></li>
+            </ul>
+          </details>
 
-        <h2 style="margin-top:18px;">Medical Foundation Models</h2>
-        <div class="grid cards topic-block">
-          <a class="card paper-card" data-has-code="1" href="generated/segment-anything.html"><h3>Segment Anything (2023)</h3><p>Promptable segmentation foundation model.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/biomedclip.html"><h3>BiomedCLIP (2023)</h3><p>Biomedical vision-language pretraining.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/llava-med.html"><h3>LLaVA-Med (2023)</h3><p>Biomedical multimodal assistant.</p></a>
-          <a class="card paper-card" data-has-code="1" href="generated/nnu-net.html"><h3>nnU-Net (2021)</h3><p>Self-configuring medical segmentation baseline.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/general-purpose-foundation-model-for-computational-pathology.html"><h3>General-Purpose Foundation Model for Pathology (2024)</h3><p>Large-scale pathology representation.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/visual-language-foundation-model-for-computational-pathology.html"><h3>VLM for Computational Pathology (2024)</h3><p>Pathology vision-language foundation model.</p></a>
-        </div>
+          <details>
+            <summary>Foundation Models for Medical Imaging</summary>
+            <ul class="paper-list">
+              <li data-code="1"><span class="paper-title">Segment Anything (2023)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2304.02643">Paper</a>] [<a href="https://github.com/facebookresearch/segment-anything">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">MedSAM (2024)</span><span class="paper-link">[<a href="https://www.nature.com/articles/s41467-024-44824-z">Paper</a>] [<a href="https://github.com/bowang-lab/MedSAM">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">SAM-Med2D (2023)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2308.16184">Paper</a>] [<a href="https://github.com/OpenGVLab/SAM-Med2D">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">BiomedCLIP (2023)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2303.00915">Paper</a>] [<a href="https://github.com/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">LLaVA-Med (2023)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2306.00890">Paper</a>] [<a href="https://github.com/microsoft/LLaVA-Med">Code</a>]</span></li>
+              <li data-code="1"><span class="paper-title">nnU-Net (2021)</span><span class="paper-link">[<a href="https://doi.org/10.1038/s41592-020-01008-z">Paper</a>] [<a href="https://github.com/MIC-DKFZ/nnUNet">Code</a>]</span></li>
+            </ul>
+          </details>
 
-        <h2 style="margin-top:18px;">Surveys and Roadmaps</h2>
-        <div class="grid cards topic-block">
-          <a class="card paper-card" data-has-code="0" href="generated/pinn-for-medical-image-analysis-a-systematic-review.html"><h3>PINN for Medical Image Analysis Review (2025)</h3><p>Systematic review across medical PI methods.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/physics-informed-ml-for-computational-medical-imaging.html"><h3>Physics-Informed ML for Computational Imaging (2025)</h3><p>Data-physics integration roadmap.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/physics-inspired-generative-models-in-medical-imaging.html"><h3>Physics-Inspired Generative Models Review (2025)</h3><p>Generative physics-focused survey.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/physical-foundations-for-trustworthy-medical-imaging-ai.html"><h3>Physical Foundations for Trustworthy Medical Imaging AI (2025)</h3><p>Trustworthiness and physical consistency focus.</p></a>
-          <a class="card paper-card" data-has-code="0" href="generated/computational-histopathology-survey.html"><h3>Computational Histopathology Survey (2021)</h3><p>Pathology capability map.</p></a>
+          <details>
+            <summary>Key Surveys and Roadmaps</summary>
+            <ul class="paper-list">
+              <li data-code="0"><span class="paper-title">PINN for Medical Image Analysis: A Systematic Review (2025)</span><span class="paper-link">[<a href="https://doi.org/10.1145/3768158">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Physics-Informed ML for Computational Medical Imaging (2025)</span><span class="paper-link">[<a href="https://doi.org/10.1007/s10462-025-11303-w">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Physics-Inspired Generative Models in Medical Imaging (2025)</span><span class="paper-link">[<a href="https://doi.org/10.1146/annurev-bioeng-102723-013922">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Physical Foundations for Trustworthy Medical Imaging AI (2025)</span><span class="paper-link">[<a href="https://arxiv.org/abs/2505.02843">Paper</a>]</span></li>
+              <li data-code="0"><span class="paper-title">Computational Histopathology Survey (2021)</span><span class="paper-link">[<a href="https://doi.org/10.1016/j.media.2020.101813">Paper</a>]</span></li>
+            </ul>
+          </details>
         </div>
 
         <p style="margin-top: 18px;">
@@ -92,13 +148,14 @@
     <script>
       (() => {
         const input = document.querySelector('#paper-search');
-        const cards = Array.from(document.querySelectorAll('.paper-card'));
+        const sections = Array.from(document.querySelectorAll('.paper-accordion details'));
+        const items = Array.from(document.querySelectorAll('.paper-list li'));
         const totalNode = document.querySelector('#paper-total');
         const codeNode = document.querySelector('#paper-code');
         const updatedNode = document.querySelector('#paper-updated');
 
-        const total = cards.length;
-        const withCode = cards.filter((c) => c.getAttribute('data-has-code') === '1').length;
+        const total = items.length;
+        const withCode = items.filter((item) => item.dataset.code === '1').length;
         if (totalNode) totalNode.textContent = `Total Papers: ${total}`;
         if (codeNode) codeNode.textContent = `With Code: ${withCode}`;
         if (updatedNode) updatedNode.textContent = `Updated: ${new Date().getFullYear()}`;
@@ -106,8 +163,16 @@
         if (!input) return;
         input.addEventListener('input', () => {
           const query = input.value.trim().toLowerCase();
-          cards.forEach((card) => {
-            card.style.display = card.textContent.toLowerCase().includes(query) ? '' : 'none';
+          sections.forEach((section) => {
+            const listItems = Array.from(section.querySelectorAll('li'));
+            let visible = 0;
+            listItems.forEach((li) => {
+              const match = li.textContent.toLowerCase().includes(query);
+              li.style.display = match ? '' : 'none';
+              if (match) visible += 1;
+            });
+            section.style.display = visible > 0 || query === '' ? '' : 'none';
+            if (query !== '' && visible > 0) section.open = true;
           });
         });
       })();
