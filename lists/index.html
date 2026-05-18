@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIWM Lists Index</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <main class="container" style="padding-top: 28px; padding-bottom: 38px;">
+      <section class="panel">
+        <h1 style="font-size: 1.9rem; margin-bottom: 8px;">PIWM Lists Index</h1>
+        <p class="help-text">Search and jump to any list quickly.</p>
+        <input id="list-search" class="search" type="text" placeholder="Search lists, e.g. methods / datasets / survey" />
+        <div class="grid cards" id="list-cards">
+          <a class="card" href="01-foundations.md"><h3>01 Foundations and Milestones</h3><p>Core ideas and milestones.</p></a>
+          <a class="card" href="02-piwm-methods.md"><h3>02 PIWM Methods</h3><p>Constraint mechanisms and representative methods.</p></a>
+          <a class="card" href="03-datasets-and-environments.md"><h3>03 Datasets and Environments</h3><p>Benchmarks and simulation environments.</p></a>
+          <a class="card" href="04-benchmarks-and-evaluation.md"><h3>04 Benchmarks and Evaluation</h3><p>Metrics and benchmark protocols.</p></a>
+          <a class="card" href="05-open-source-and-toolkits.md"><h3>05 Open Source and Toolkits</h3><p>Reusable frameworks and engineering tools.</p></a>
+          <a class="card" href="06-chinese-first-resources.md"><h3>06 Chinese-First Resources</h3><p>Chinese-focused learning and bilingual anchors.</p></a>
+          <a class="card" href="07-surveys-and-roadmaps.md"><h3>07 Surveys and Roadmaps</h3><p>Survey coverage and research roadmaps.</p></a>
+          <a class="card" href="08-reproducibility-and-engineering.md"><h3>08 Reproducibility and Engineering</h3><p>Reproducible workflows and governance references.</p></a>
+        </div>
+        <p style="margin-top: 14px;"><a class="btn" href="../index.html">Back to Homepage</a></p>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const input = document.querySelector('#list-search');
+        const cards = Array.from(document.querySelectorAll('#list-cards .card'));
+        if (!input || cards.length === 0) return;
+        input.addEventListener('input', () => {
+          const query = input.value.trim().toLowerCase();
+          cards.forEach((card) => {
+            const text = card.textContent.toLowerCase();
+            card.style.display = text.includes(query) ? '' : 'none';
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

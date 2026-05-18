@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome PIWM & World Models</title>
+    <meta
+      name="description"
+      content="A curated awesome list for PIWM and World Models with research and engineering focus."
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <div class="lang-row">
+          <button id="lang-en" class="btn btn-small btn-primary" type="button">EN</button>
+          <button id="lang-zh" class="btn btn-small" type="button">中文</button>
+        </div>
+
+        <p class="kicker" data-i18n="kicker">Awesome Collection</p>
+        <h1 data-i18n="title">Awesome PIWM & World Models</h1>
+        <p class="subtitle" data-i18n="subtitle">
+          Research-and-engineering-focused curation for predictive and physics-informed world models.
+        </p>
+
+        <div class="hero-meta" id="hero-meta">
+          <span class="chip" data-i18n="chip1">8 Curated Lists</span>
+          <span class="chip" data-i18n="chip2">Survey-Aligned</span>
+          <span class="chip" id="resource-count">Counting resources...</span>
+        </div>
+
+        <p>
+          <img class="overview-img" src="overview.png" alt="PIWM overview" />
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="README.md" data-i18n="open_readme">Open README</a>
+          <a class="btn" href="#sections" data-i18n="browse_sections">Browse Sections</a>
+          <a class="btn" href="#featured" data-i18n="featured_btn">Featured Papers</a>
+          <a class="btn" href="CONTRIBUTING.md" data-i18n="contribute_btn">Contribute</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container panel quick-nav">
+        <h2 data-i18n="quick_nav">Quick Navigation</h2>
+        <div class="grid mini-cards">
+          <a class="mini-card" href="lists/01-foundations.md" data-i18n="nav_foundations">Foundations</a>
+          <a class="mini-card" href="lists/02-piwm-methods.md" data-i18n="nav_methods">Methods</a>
+          <a class="mini-card" href="lists/03-datasets-and-environments.md" data-i18n="nav_datasets">Datasets</a>
+          <a class="mini-card" href="lists/04-benchmarks-and-evaluation.md" data-i18n="nav_benchmarks">Benchmarks</a>
+          <a class="mini-card" href="lists/05-open-source-and-toolkits.md" data-i18n="nav_toolkits">Toolkits</a>
+          <a class="mini-card" href="lists/06-chinese-first-resources.md" data-i18n="nav_chinese">Chinese-First</a>
+          <a class="mini-card" href="lists/07-surveys-and-roadmaps.md" data-i18n="nav_surveys">Surveys</a>
+          <a class="mini-card" href="lists/08-reproducibility-and-engineering.md" data-i18n="nav_repro">Reproducibility</a>
+        </div>
+      </section>
+
+      <section class="container panel" id="sections">
+        <h2 data-i18n="core_sections">Core Sections</h2>
+        <p class="help-text" data-i18n="search_help">Use search to quickly locate a section.</p>
+        <input id="section-search" class="search" type="text" placeholder="Search sections, e.g. diffusion / benchmark / pathology" />
+        <div class="grid cards" id="section-cards">
+          <a class="card" href="lists/01-foundations.md"><h3 data-i18n="c1_t">Foundations</h3><p data-i18n="c1_d">Milestone papers and core concepts.</p></a>
+          <a class="card" href="lists/02-piwm-methods.md"><h3 data-i18n="c2_t">PIWM Methods</h3><p data-i18n="c2_d">Physics-informed and priors-aware approaches.</p></a>
+          <a class="card" href="lists/03-datasets-and-environments.md"><h3 data-i18n="c3_t">Datasets</h3><p data-i18n="c3_d">Bench datasets and simulators.</p></a>
+          <a class="card" href="lists/04-benchmarks-and-evaluation.md"><h3 data-i18n="c4_t">Evaluation</h3><p data-i18n="c4_d">Metrics, protocols, and benchmark tasks.</p></a>
+          <a class="card" href="lists/05-open-source-and-toolkits.md"><h3 data-i18n="c5_t">Open Source</h3><p data-i18n="c5_d">Frameworks, codebases, and tooling.</p></a>
+          <a class="card" href="lists/06-chinese-first-resources.md"><h3 data-i18n="c6_t">Chinese-First</h3><p data-i18n="c6_d">Chinese resources with bilingual anchors.</p></a>
+          <a class="card" href="lists/07-surveys-and-roadmaps.md"><h3 data-i18n="c7_t">Surveys</h3><p data-i18n="c7_d">Taxonomies, roadmaps, and open problems.</p></a>
+          <a class="card" href="lists/08-reproducibility-and-engineering.md"><h3 data-i18n="c8_t">Engineering</h3><p data-i18n="c8_d">Reproducibility and practical workflows.</p></a>
+        </div>
+      </section>
+
+      <section class="container timeline panel">
+        <h2 data-i18n="timeline_title">Suggested Reading Timeline</h2>
+        <ol>
+          <li data-i18n="t1"><strong>Week 1:</strong> Foundations + one survey</li>
+          <li data-i18n="t2"><strong>Week 2:</strong> PIWM method families and assumptions</li>
+          <li data-i18n="t3"><strong>Week 3:</strong> Benchmark protocols and failure modes</li>
+          <li data-i18n="t4"><strong>Week 4:</strong> Reproduce one open-source baseline</li>
+        </ol>
+      </section>
+
+      <section class="container panel" id="featured">
+        <h2 data-i18n="featured_title">Featured Papers</h2>
+        <ul>
+          <li><a href="https://doi.org/10.1016/j.jcp.2018.10.045">Physics-Informed Neural Networks (2019)</a></li>
+          <li><a href="https://arxiv.org/abs/2301.04104">DreamerV3 (2023)</a></li>
+          <li><a href="https://arxiv.org/abs/2507.01484">Medical World Model (2025)</a></li>
+          <li><a href="https://doi.org/10.1145/3768158">PINN for Medical Imaging Review (2025)</a></li>
+          <li><a href="https://arxiv.org/abs/2406.19263">Physics-Informed Latent Diffusion for MRI Synthesis (2024)</a></li>
+          <li><a href="https://arxiv.org/abs/2303.00915">BiomedCLIP (2023)</a></li>
+          <li><a href="https://www.nature.com/articles/s41467-024-44824-z">MedSAM (2024)</a></li>
+        </ul>
+      </section>
+
+      <section class="container panel">
+        <h2 data-i18n="contrib_focus">Contribution Focus</h2>
+        <ul>
+          <li data-i18n="f1">Primary-source links (papers, official docs, official repos)</li>
+          <li data-i18n="f2">One-line neutral summary for each entry</li>
+          <li data-i18n="f3">Strong practical signal for research or implementation</li>
+          <li data-i18n="f4">Use entry tags like <code>[Paper]</code>, <code>[Code]</code>, <code>[Data]</code>, <code>[Survey]</code></li>
+        </ul>
+        <a class="btn" href="CONTRIBUTING.md" data-i18n="contrib_guide">Contribution Guide</a>
+      </section>
+
+      <section class="container panel">
+        <h2 data-i18n="index_title">Lists Index</h2>
+        <p data-i18n="index_desc">Use the searchable index page to scan all lists quickly.</p>
+        <a class="btn" href="lists/index.html" data-i18n="open_index">Open Lists Index</a>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>Built for GitHub Pages. Licensed under MIT.</p>
+    </footer>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
