@@ -354,6 +354,56 @@ h2 {
   font-size: 0.92rem;
 }
 
+.paper-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.paper-preview-card {
+  border: 1px solid #cdd9ef;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+}
+
+.paper-preview-card h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.paper-preview-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.paper-preview-list li {
+  margin: 0 0 8px;
+  color: #243a63;
+}
+
+.badge-link {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  vertical-align: middle;
+}
+
+.badge-paper {
+  color: #fff;
+  background: #c0392b;
+}
+
+.badge-code {
+  color: #fff;
+  background: #1e8449;
+}
+
 .footer {
   padding: 0 0 28px;
   color: var(--muted);

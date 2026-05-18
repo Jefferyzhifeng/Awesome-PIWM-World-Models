@@ -170,9 +170,10 @@
   const hpTotal = document.querySelector('#hp-total');
   const hpCode = document.querySelector('#hp-code');
   const hpUpdated = document.querySelector('#hp-updated');
-  const featuredListItems = document.querySelectorAll('#featured li');
+  const featuredListItems = document.querySelectorAll('#featured .paper-preview-list li');
+  const featuredCodeLinks = document.querySelectorAll('#featured .badge-code');
   if (hpTotal) hpTotal.textContent = `Total Papers: ${featuredListItems.length}`;
-  if (hpCode) hpCode.textContent = 'With Code: See Paper Pages';
+  if (hpCode) hpCode.textContent = `With Code: ${featuredCodeLinks.length}`;
   if (hpUpdated) hpUpdated.textContent = `Updated: ${year}`;
 
   const saved = localStorage.getItem('piwm_lang') || 'en';
